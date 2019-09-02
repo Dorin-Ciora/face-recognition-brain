@@ -86,7 +86,7 @@ displayFaceBox = (box) => {
       .then(response => response.json())
       .then(response => { 
         if (response) {
-        fetch('https://infinite-mountain-59020.herokuapp.com:3000/image', {
+        fetch('https://infinite-mountain-59020.herokuapp.com/image', {
           method: 'put',
           headers: {'Content-type': 'application/json'},
           body: JSON.stringify({
