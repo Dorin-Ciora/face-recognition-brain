@@ -76,7 +76,7 @@ displayFaceBox = (box) => {
 
     onButtonSubmit = () => {
       this.setState({imageUrL: this.state.input})
-      fetch('http://localhost:3000/imageurl', {
+      fetch('https://infinite-mountain-59020.herokuapp.com/imageurl', {
           method: 'post',
           headers: {'Content-type': 'application/json'},
           body: JSON.stringify({
@@ -86,7 +86,7 @@ displayFaceBox = (box) => {
       .then(response => response.json())
       .then(response => { 
         if (response) {
-        fetch('http://localhost:3000/image', {
+        fetch('https://infinite-mountain-59020.herokuapp.com:3000/image', {
           method: 'put',
           headers: {'Content-type': 'application/json'},
           body: JSON.stringify({
